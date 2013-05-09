@@ -47,8 +47,13 @@ SELECT rolname FROM pg_roles; -- psql \du 也可以达到同样效果
 一个刚被初始化好的系统，总是包含一个预定义的role，"superuser"，默认情况下，它的名字和初始化它的操作系统用户名相同。一般把它改名为 **postgres**。  
 psql -U 可以指定连接时的role。createuser 和 psql 都是用当前操作系统用户名作为其默认的role name。因此，最佳实践是： roles和操作系统users之间维护一个对应关系。  
 
-
-
+### 20.2 role attributes
+数据库 role 可以使用一系列的 attributes 来定义其权力。  
+* login privilege
+```sql
+CREATE ROLE name LOGIN;
+CREATE USER name; -- 和 CREATE ROLE 相同，除了 CREATE USER 默认LOGIN attribute
+```
 
 
 
