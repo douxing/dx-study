@@ -48,17 +48,33 @@ SELECT rolname FROM pg_roles; -- psql \du 也可以达到同样效果
 psql -U 可以指定连接时的role。createuser 和 psql 都是用当前操作系统用户名作为其默认的role name。因此，最佳实践是： roles和操作系统users之间维护一个对应关系。  
 
 ### 20.2 role attributes
-数据库 role 可以使用一系列的 attributes 来定义其权力。  
+数据库 role 可以使用一系列的 attributes 来定义其权限。  
 * login privilege
 ```sql
 CREATE ROLE name LOGIN;
-CREATE USER name; -- 和 CREATE ROLE 相同，除了 CREATE USER 默认LOGIN attribute
+CREATE USER name; -- 和 CREATE ROLE 相同，除了 CREATE USER 默认LOGIN权限
 ```
-
-
-
-
-
+* superuser status
+```sql
+CREATE ROLE name SUPERUSER; -- 1. 只有superuser可以创建superuser，2. superuser拥有除了login之外的所有权限
+```
+* database creation
+```sql
+CREATE ROLE name CREATEDB; -- 创建数据库的权限
+```
+* database creation
+```sql
+CREATE ROLE name CREATEROLE; -- 创建role的权限，除了superuser role之外
+```
+* initiating replication
+```sql
+CREATE ROLE name REPLICATION LOGIN; -- 流复制还需要有login权限
+```
+* password
+```sql
+CREATE ROLE name PASSWORD 'string'; -- 设置role的密码
+```
+**使用 ALTER ROLE 来修改role的权限**
 
 end of file
 
