@@ -36,7 +36,7 @@ CREATE ROLE name;
 DROP ROLE name;
 ```
 两个命令包括了上述两个sql命令：
-```shell
+```bash
 createuser name
 dropuser name
 ```
