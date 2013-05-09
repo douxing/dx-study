@@ -29,5 +29,5 @@ psql 程序有一些不属于 SQL 命令的内部命令。 它们以反斜杠开
 ### 20.1 database roles
 创建role:  
 ```sql
-CREATE ROLE name;
+CREATE ROLE name; // name符合SQL标识符的规定。可用双引号引起。
 ```
