@@ -12,10 +12,11 @@
 注意 ~> 的使用：如~>3.1.4，那3.1.x，凡是x>=4的版本都可以，如果~>3.0，那任何3开头的版本都可以。  
 也就是说使用 ~> 的匹配是前几项完全匹配，最后一项高于指定版本。
 
-关于bundle:  
-bundle install will use the Gemfile.lock as a starting point, and it will install only
-the versions of the various gems as specified in this file.
-bundle update will (unsurprisingly) update one or more named gems and will
-update the Gemfile.lock accordingly.
-所以，如果要修改某个gem，那在gemfile里面修改，然后‘bundle update 修改的gem列表‘，不要直接使用bundle update，尤其是将要发布之时。
+关于bundle install 和 bundle update:  
+* bundle install will use the Gemfile.lock as a starting point, and it will install only
+the versions of the various gems as specified in this file. 
+* bundle update will (unsurprisingly) update one or more named gems and will
+update the Gemfile.lock accordingly.  
+所以，如果要修改某个gem，那在gemfile里面修改，然后‘bundle update 修改的gem列表‘。  
+**不要直接使用bundle update，尤其是将要发布之时。**
 
