@@ -44,4 +44,4 @@ dropuser name
 ```sql
 SELECT rolname FROM pg_roles; -- psql \du 也可以达到同样效果
 ```
-
+一个刚被初始化好的系统，总是包含一个预定义的role，"superuser"，默认情况下，它的名字和初始化它的操作系统用户名相同
