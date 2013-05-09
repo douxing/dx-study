@@ -24,4 +24,10 @@ psql 程序有一些不属于 SQL 命令的内部命令。 它们以反斜杠开
 5. mydb=> \h // 帮助语法
 6. mydb=> \q // 退出psql
 
-
+## chapter 20 database roles
+在8.1之前的版本中, users和groups是区分的。现在的版本中，已经把这两个概念归入roles这个概念了。  
+### 20.1 database roles
+创建role:  
+```sql
+CREATE ROLE name;
+```
