@@ -27,7 +27,21 @@ psql 程序有一些不属于 SQL 命令的内部命令。 它们以反斜杠开
 ## chapter 20 database roles
 在8.1之前的版本中, users和groups是区分的。现在的版本中，已经把这两个概念归入roles这个概念了。  
 ### 20.1 database roles
-创建role:  
+创建role: （name符合SQL标识符的规定。可用双引号引起。）  
 ```sql
-CREATE ROLE name; // name符合SQL标识符的规定。可用双引号引起。
+CREATE ROLE name;
 ```
+移除role：
+```sql
+DROP ROLE name;
+```
+两个命令包括了上述两个sql命令：
+```shell
+createuser name
+dropuser name
+```
+从pg_roles system catalog中查看:
+```sql
+SELECT rolname FROM pg_roles; -- psql \du 也可以达到同样效果
+```
+
