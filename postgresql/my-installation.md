@@ -19,6 +19,6 @@ Shall the new role be allowed to create more new roles? (y/n) y
 ```bash
 dx@ubuntu:~$ createdb mydb # 创建一个测试数据库
 ```
-这样，就可以通过 psql -d mydb 访问数据库了。
+这样，就可以通过 psql -d mydb 访问数据库了。在[postgresql第二章](wiki.postgresql.org/wiki/9.1第二章)中明确表示使用该数据库作为以后所有例子的基础。
 
 
