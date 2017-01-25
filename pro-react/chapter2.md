@@ -9,7 +9,7 @@
 ### JSX vs. HTML
 
 1. 标签属性必须为CamelCase
-2. 所有元素都必须有"显示关闭", 如<br>必须为<br />, <img src="...">必须为<img src="..." />
+2. 所有元素都必须有"显示关闭", 如`<br>`必须为`<br />`, `<img src="...">`必须为`<img src="..." />`
 3. 属性名是基于DOM接口的, 但因为JSX也是JS, 所以有些属性如class不能使用, 需要用className替代
 
 ### JSX 规范
