@@ -1,13 +1,9 @@
 [package]
-name = "book"
+name = "line-chat"
 version = "0.1.0"
 authors = ["douxing <douxing@zccp.com>"]
 
-[workspace]
-members = [
-  "minigrep",
-  "cacher",
-  "hellohttp",
-]
-
 [dependencies]
+tokio = "0.1"
+futures = "0.1"
+bytes = "0.4"

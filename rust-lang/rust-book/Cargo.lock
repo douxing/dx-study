@@ -1,0 +1,16 @@
+[[package]]
+name = "book"
+version = "0.1.0"
+
+[[package]]
+name = "cacher"
+version = "0.1.0"
+
+[[package]]
+name = "hellohttp"
+version = "0.1.0"
+
+[[package]]
+name = "minigrep"
+version = "0.1.0"
+

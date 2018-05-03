@@ -1,13 +1,6 @@
 [package]
-name = "book"
+name = "dx-study"
 version = "0.1.0"
 authors = ["douxing <douxing@zccp.com>"]
-
-[workspace]
-members = [
-  "minigrep",
-  "cacher",
-  "hellohttp",
-]
 
 [dependencies]

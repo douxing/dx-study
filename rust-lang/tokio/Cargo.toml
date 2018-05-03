@@ -1,13 +1,11 @@
 [package]
-name = "book"
+name = "tokio"
 version = "0.1.0"
 authors = ["douxing <douxing@zccp.com>"]
 
 [workspace]
 members = [
-  "minigrep",
-  "cacher",
-  "hellohttp",
+    "line-chat",
 ]
 
 [dependencies]
